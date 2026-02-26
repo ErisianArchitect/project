@@ -1,0 +1,9 @@
+[package]
+name = "project"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+chrono = "0.4.44"
+eframe = { version = "0.33.3", features = ["persistence"] }
+pending = { version = "1.0.0", features = ["rayon"] }
