@@ -2289,9 +2289,9 @@ checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
 
 [[package]]
 name = "pending"
-version = "1.0.0"
+version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f1ce85bd6f5b4cfe47a031d9c920a459d4fc4fbf3ac487a2f102e5a65fdee794"
+checksum = "ee2826e98da382fa733734f8c43efc82bb4c7c42a5b6248b5c42cb41922f6dfc"
 dependencies = [
  "rayon",
  "thiserror 2.0.18",
@@ -2443,7 +2443,26 @@ version = "0.1.0"
 dependencies = [
  "chrono",
  "eframe",
+ "paste",
  "pending",
+ "project_decmac",
+ "project_procmac",
+]
+
+[[package]]
+name = "project_decmac"
+version = "0.1.0"
+dependencies = [
+ "project_procmac",
+]
+
+[[package]]
+name = "project_procmac"
+version = "0.1.0"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]

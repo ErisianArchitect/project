@@ -3,7 +3,27 @@ name = "project"
 version = "0.1.0"
 edition = "2024"
 
-[dependencies]
+[workspace]
+members = ["crates/*"]
+
+[workspace.dependencies]
+# Internal
+project_decmac = { path = "crates/project_decmac", version = "0.1.0" }
+project_procmac = { path = "crates/project_procmac", version = "0.1.0" }
+
+# External
 chrono = "0.4.44"
 eframe = { version = "0.33.3", features = ["persistence"] }
-pending = { version = "1.0.0", features = ["rayon"] }
+pending = { version = "1.0.1", features = ["rayon"] }
+paste = "1.0.15"
+
+[dependencies]
+# Internal
+project_decmac.workspace = true
+project_procmac.workspace = true
+
+# External
+chrono.workspace = true
+eframe.workspace = true
+pending.workspace = true
+paste.workspace = true
